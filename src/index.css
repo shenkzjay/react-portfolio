@@ -1,0 +1,387 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+
+/* Home page */
+.wrapper{
+    background-image: url("./images/header.png");
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.Navbar{
+    padding:10px;
+    margin: 0px;
+}
+
+
+.heading{
+    text-align: center;
+    margin-top: 100px;
+    
+}
+
+hr{
+    width:500px;
+    margin-left: 435px;
+    border: 3px solid #0AFB22;
+
+}
+
+.name{
+    color: #0AFB22;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90px;
+}
+
+.skills{
+    color:#0AFB22;
+    font-family: corbel;
+    font-size: 25px;
+}
+
+/*****Navigation collapse*****/
+#roundButton {
+    background-color: #0AFB22;
+    margin-bottom: 20px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border:5px solid #0065A6;
+    outline: none;
+    transition: all .2s cubic-bezier(0, 1.26, .8, 1.28);
+    
+}
+
+.buttonname{
+    font-size: 20px;
+    margin-left: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #0AFB22;
+}
+
+#roundButton:hover{
+    background-color: #043620;
+    cursor: pointer;
+    border-color: #003557;
+    transform: scale(1.5 1.2);
+}
+
+#roundButton:active{
+    border-color: #003557;
+    background-color: #FFF;
+}
+
+#flyoutMenu{
+    width:25vw;
+    height: 100vh;
+    background-color: #0AFB22;
+    position: fixed;
+    top:0;
+    left:0;
+    transition: transform .5s cubic-bezier(0, .52, 0, 1);
+    overflow: flow;
+    z-index: 1000;
+}
+
+#flyoutMenu.hide {
+    transform: translate3d(-100vw, 0, 0);
+}
+
+#flyoutMenu.show {
+    transform: translate3d(0vw, 0, 0);
+    overflow: hidden;
+}
+
+#flyoutMenu a {
+    color: #043620;
+    text-decoration: none;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#flyoutMenu a:hover{
+    text-decoration: underline;
+}
+
+#flyoutMenu li{
+        text-align: center;
+        padding: 8px;
+  
+}
+
+
+
+/********** About*******/
+.sidebar {
+    width: 25%;
+    height:100vh;
+    background-color:#043620;
+    color:#0AFB22;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+   
+}
+
+.text{
+    font-size: 50px;
+    margin-top: 150px;
+}
+
+.fullside{
+    width: 75%;
+    height:650px;
+    background-color:#C1FEE3;
+   
+    
+}
+
+.wholepage {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.pics {
+    border-radius:50%;
+    width:150px;
+    height:185px;
+    margin-top:50px;
+}
+
+.profilename {
+    font-size:20px;
+    font-family: corbel;
+    color:#0AFB22;
+    font-style: italic;
+}
+
+.subtitle {
+    text-align: left;
+    padding: 10px;
+    margin: 10px 0;
+    background-color:#043620;
+    color:#0AFB22;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+
+.aboutstory {
+    font-size:18px;
+    text-align: left;
+    color: #043620;
+    margin:10px;
+    padding:10px;
+    font-family: corbel;
+}
+
+
+/************* portfolio****************/
+
+
+
+/******Image-gallery*******/
+
+.image-gallery-image {
+    height :calc(100vh - 120px);
+}
+
+
+/****** Contact page ********/
+
+.form-control{
+    border: 0px solid #f2f2f2;
+    border-radius: 10px;
+    padding:5px;
+    width: 300px;
+    
+}
+
+.form-control:hover{
+    box-shadow: 1px 1px 5px;
+    border: 2px solid #043620;
+}
+
+::placeholder{
+    color:#d8d8d8;
+}
+
+.btn{
+    background: #043620;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    color: #0AFB22;
+    margin:10px;
+    width:100px;
+}
+
+.btn:hover{
+    color:#043620;
+    background: white;
+    border: 2px solid #043620;
+    box-shadow: 1px 1px 6px;
+}
+
+.tiles{
+    color: #043620;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+
+.footericon {
+    height:50px;
+    width:50px;
+    margin: 80px 20px 0 0;
+}
+
+/***** Media Queries *********/
+
+@media screen and (max-width: 320px){
+
+
+    hr {
+        width:0;
+        margin-left: 0;
+        border: 0;
+    }
+
+    .name{
+        font-size: 50px;
+    }
+
+    .skills{
+        font-size:17px ;
+    }
+
+    .wholepage {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        height:25vh;
+        background-color:#043620;
+        color:#0AFB22;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+       
+    }
+
+    .text{
+        margin-top:0;
+    }
+
+    .fullside {
+        width: 100%;
+        height: 100vh;
+        background-color: #C1FEE3;;
+    }
+
+    #flyoutMenu{
+        width:50vw;
+        height: 100vh;
+        background-color: #0AFB22;
+        position: fixed;
+        top:0;
+        left:0;
+        transition: transform .5s cubic-bezier(0, .52, 0, 1);
+        overflow: flow;
+        z-index: 1000;
+    }
+    
+    
+
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+
+   hr{
+    width:0;
+    margin-left: 0;
+    border: 0;
+   }
+
+   .name{
+    font-size: 65px;
+}
+
+.skills{
+    font-size:17px ;
+}
+
+.wholepage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sidebar {
+    width: 100%;
+    height:25vh;
+    background-color:#043620;
+    color:#0AFB22;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+   
+}
+
+.text{
+    margin-top:0;
+}
+
+.fullside {
+    width: 100%;
+    height: 100vh;
+    background-color: #C1FEE3;;
+}
+
+#flyoutMenu{
+    width:50vw;
+    height: 100vh;
+    background-color: #0AFB22;
+    position: fixed;
+    top:0;
+    left:0;
+    transition: transform .5s cubic-bezier(0, .52, 0, 1);
+    overflow: flow;
+    z-index: 1000;
+}
+
+
+}
+
+@media screen and (min-width:480px) and (max-width:1280px){
+
+    hr{
+        width:0;
+        margin-left: 0;
+        border: 0;
+
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1380px){
+
+    hr{
+        width:500px;
+        margin-left: 435px;
+        border: 3px solid #0AFB22;
+    
+    }
+    
+    
+}
+
+
+
+
+
